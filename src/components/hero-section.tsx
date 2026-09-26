@@ -20,9 +20,9 @@ function VideoControls({
       type="button"
       onClick={onToggle}
       aria-label={isPlaying ? "Pause hero video" : "Play hero video"}
-      className="flex h-14 w-14 items-center justify-center rounded-full border border-white/80 bg-[rgba(255,255,255,0.72)] text-[#171717] shadow-[0_16px_28px_rgba(23,23,23,0.12)] backdrop-blur-sm transition hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--sage)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f3e5de]"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/80 bg-[rgba(255,255,255,0.72)] text-[#171717] shadow-[0_16px_28px_rgba(23,23,23,0.12)] backdrop-blur-sm transition hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--sage)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f3e5de] sm:h-14 sm:w-14"
     >
-      {isPlaying ? <Pause size={18} aria-hidden="true" /> : <Play size={18} className="ml-0.5 fill-current" aria-hidden="true" />}
+      {isPlaying ? <Pause size={16} aria-hidden="true" /> : <Play size={16} className="ml-0.5 fill-current" aria-hidden="true" />}
     </button>
   );
 }
@@ -124,7 +124,7 @@ function HeroVideo() {
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.1)] via-transparent to-transparent" aria-hidden="true" />
 
           <div className="absolute inset-x-0 bottom-4 z-20 flex items-end justify-between px-3 text-white">
-            <div className="text-xs font-medium">▶ 4.2M</div>
+            <div className="text-xs font-medium">▶ 18M</div>
             <VideoControls isPlaying={isPlaying} onToggle={handleToggle} />
             <Music2 size={16} aria-label="TikTok audio" />
           </div>
