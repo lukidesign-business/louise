@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Music2, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -55,9 +55,14 @@ function FloatingPhotoCard({
 
 function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const prefersReducedMotion = useReducedMotion();
-  const [isPlaying, setIsPlaying] = useState(!prefersReducedMotion);
-  const [isVisible, setIsVisible] = useState(false);
+  // What the viewer has asked for via the play/pause button. The video is only
+  // ever paused on their behalf when it scrolls out of view, which must not be
+  // mistaken for them pausing it.
+  const [wantsToPlay, setWantsToPlay] = useState(true);
+  // What the element is actually doing, so the button icon stays honest even if
+  // the browser refuses to autoplay.
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -68,7 +73,7 @@ function HeroVideo() {
         const [entry] = entries;
         setIsVisible(Boolean(entry?.isIntersecting));
       },
-      { threshold: 0.35 },
+      { threshold: 0.2 },
     );
 
     observer.observe(video);
@@ -80,30 +85,14 @@ function HeroVideo() {
     const video = videoRef.current;
     if (!video) return;
 
-    if (prefersReducedMotion) {
-      video.pause();
-      return;
-    }
-
-    if (isVisible && isPlaying) {
-      void video.play().catch(() => setIsPlaying(false));
-    } else {
+    if (isVisible && wantsToPlay) {
+      void video.play().catch(() => undefined);
+    } else if (!video.paused) {
       video.pause();
     }
-  }, [isVisible, isPlaying, prefersReducedMotion]);
+  }, [isVisible, wantsToPlay]);
 
-  const handleToggle = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (video.paused) {
-      void video.play();
-      setIsPlaying(true);
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
-  };
+  const handleToggle = () => setWantsToPlay((current) => !current);
 
   return (
     <motion.div
@@ -119,11 +108,11 @@ function HeroVideo() {
             ref={videoRef}
             src={heroConfig.videoSrc}
             poster={heroConfig.posterSrc}
-            autoPlay={!prefersReducedMotion}
+            autoPlay
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             className="h-full w-full object-cover"
             aria-label="Louise creator video preview"
             onPause={() => setIsPlaying(false)}

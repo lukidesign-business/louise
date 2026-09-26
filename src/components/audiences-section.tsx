@@ -40,7 +40,7 @@ export function AudiencesSection() {
           </div>
 
           <div className="relative z-10 mx-auto mt-10 w-44 rotate-[4deg] border-[6px] border-white bg-white shadow-2xl sm:w-56 lg:absolute lg:right-[10%] lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-64 lg:-translate-y-1/2">
-            <Image src="/images/louise-hero-2.jpg" alt="Creator portrait from a brand partnership shoot" width={900} height={1200} className="aspect-[4/5] w-full object-cover" loading="lazy" />
+            <Image src="/images/louise-hero-5.jpg" alt="Creator portrait from a brand partnership shoot" width={1440} height={1920} className="aspect-[4/5] w-full object-cover" loading="lazy" />
           </div>
           <p className="absolute bottom-24 right-[5%] z-20 hidden w-32 rotate-[-8deg] font-serif text-lg italic leading-tight text-neutral-700 md:right-[8%] lg:block">
             Brands that get it get results.
