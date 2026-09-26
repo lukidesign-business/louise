@@ -66,10 +66,13 @@ export function BlueprintSection() {
             </p>
           </div>
           <div>
-            <ul className="space-y-3 text-sm text-neutral-700">
+            <ul className="space-y-2.5 text-xs leading-relaxed text-neutral-700 sm:space-y-3 sm:text-sm">
               {advisoryHighlights.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#c9a56a] text-white"><Check size={12} /></span>
+                <li key={item} className="flex items-start gap-2.5 sm:gap-3">
+                  <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#c9a56a] text-white sm:h-5 sm:w-5">
+                    <Check size={10} className="sm:hidden" />
+                    <Check size={12} className="hidden sm:block" />
+                  </span>
                   {item}
                 </li>
               ))}
