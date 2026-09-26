@@ -6,7 +6,7 @@ import { ArrowRight, ArrowUpRight, Music2, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { LeafIllustration } from "@/components/leaf-illustration";
-import { heroConfig } from "@/lib/site-data";
+import { brandLogos, heroConfig } from "@/lib/site-data";
 
 function VideoControls({
   isPlaying,
@@ -177,9 +177,7 @@ function HeroCollage() {
         <p className="text-[9px] uppercase tracking-wider text-neutral-500 sm:text-[10px]">campaign video views</p>
       </motion.div>
 
-      <p className="absolute left-0 top-0 z-30 w-24 -rotate-6 font-serif text-xs italic leading-tight text-neutral-700 sm:w-28 sm:text-sm lg:left-1/2 lg:top-2 lg:-translate-x-[115px]">
-        Wellness / Lifestyle / Real People / Real Results
-      </p>
+
       <p className="absolute bottom-0 right-0 z-30 w-24 rotate-6 font-serif text-xs italic leading-tight text-neutral-700 sm:w-28 sm:text-sm lg:bottom-auto lg:left-1/2 lg:right-auto lg:top-1/2 lg:w-32 lg:translate-x-[175px] lg:-translate-y-1/2">
         More Creators, Brighter Brands
       </p>
@@ -227,9 +225,26 @@ export function HeroSection() {
             Trusted across beauty, fashion, wellness &amp; lifestyle
           </p>
           <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-600">
-            <div className="flex -space-x-2">
-              {heroConfig.photos.slice(0, 3).map((photo) => (
-                <Image key={photo.src} src={photo.src} alt="" width={32} height={32} className="h-8 w-8 rounded-full border-2 border-[#FDFBF7] object-cover" />
+            <div className="flex items-center gap-1.5" aria-label="Partner brands">
+              {brandLogos.slice(0, 3).map((brand) => (
+                <span
+                  key={brand.name}
+                  className="inline-flex items-center justify-center"
+                >
+                  {brand.logo ? (
+                    <Image
+                      src={brand.logo}
+                      alt={`${brand.name} logo`}
+                      width={64}
+                      height={40}
+                      className={`w-auto object-contain ${brand.name === "e.l.f." ? "max-h-8 max-w-16" : "max-h-12 max-w-32"}`}
+                    />
+                  ) : (
+                    <span className="font-display text-[9px] font-semibold tracking-[-0.02em] text-neutral-700">
+                      {brand.name}
+                    </span>
+                  )}
+                </span>
               ))}
             </div>
             <span className="text-sm text-amber-500" aria-label="5 out of 5 stars">★★★★★</span>

@@ -17,10 +17,10 @@ export function AboutSection() {
             <div className="relative mx-auto flex w-full max-w-[210px] flex-col items-center sm:mx-0 lg:mx-0">
               <p className="absolute -left-4 -top-12 -rotate-6 font-serif text-xl italic text-neutral-700">Louise Thomson</p>
               <div className="w-48 rotate-[-2deg] rounded-2xl bg-white p-2.5 shadow-xl sm:w-56">
-                <Image src="/images/louise-hero-1.jpg" alt="Louise Thomson portrait" width={900} height={1200} className="aspect-[4/5] w-full rounded-xl object-cover" priority />
+                <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/550659961_18487453072078510_356204783347706028_n-rDrmGbLvGF4nDmxViyACNhb5bWuyyP.jpg" alt="Louise Thomson portrait" width={900} height={1200} className="aspect-[4/5] w-full rounded-xl object-cover" priority />
               </div>
               <div className="-ml-3 -mt-12 w-36 rotate-[3deg] self-start rounded-xl bg-white p-2 shadow-lg sm:w-40">
-                <Image src="/images/louise-hero-2.jpg" alt="Louise with a camera during a lifestyle shoot" width={900} height={900} className="aspect-square w-full rounded-lg object-cover" />
+                <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/770427690_18560009563078510_168171443335097639_n-gTWX1wDe3aW1nqLDoLa65WfEkC9Ulr.jpg" alt="Louise with a camera during a lifestyle shoot" width={900} height={900} className="aspect-square w-full rounded-lg object-cover" />
               </div>
               <p className="mt-3 ml-12 max-w-[150px] rotate-[-4deg] font-serif text-sm italic leading-tight text-neutral-700">Scotland-based Creator Influencer Presenter</p>
             </div>

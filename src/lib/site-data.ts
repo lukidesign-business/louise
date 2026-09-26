@@ -15,9 +15,18 @@ export type BrandLogo = {
 };
 
 export const brandLogos: BrandLogo[] = [
-  { name: "L'Oréal" },
-  { name: "e.l.f." },
-  { name: "The Ordinary" },
+  {
+    name: "L'Oréal",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/loreal-paris-logo-png_seeklogo-85584-MGc3jIZlkUQjreWiF3E4gMfOkNkEHh.png",
+  },
+  {
+    name: "e.l.f.",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/elf-cosmetics-logo-png_seeklogo-447294-r6SdtJijiHCn2ZD8PAO0ZqCaysmAeb.png",
+  },
+  {
+    name: "The Ordinary",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/the-ordinary-logo-png_seeklogo-323086-fcp0IpZWyHYo4GTCaquxDEqVM60H9f.png",
+  },
   { name: "Pixi" },
   { name: "Maybelline" },
   { name: "Estrid" },
