@@ -111,22 +111,22 @@ export const heroConfig = {
   posterSrc: "/media/louise-hero-poster.jpg",
   photos: [
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/727057596_18546063139078510_8882045838529108754_n-37ZLbgXvH7A4vTvN6StSpCfLfYjruK.jpg",
+      src: "/images/louise-hero-1.jpg",
       alt: "Louise in a warm beauty portrait with polished styling.",
       className: "hidden sm:block -left-6 top-5 md:-left-8 md:top-10",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/814728916_18569991610078510_2740432823785141240_n-hKSXaPAxELeE2oUgv0KKQTX88q8QeK.jpg",
+      src: "/images/louise-hero-2.jpg",
       alt: "Louise in a fashion portrait with a soft editorial look.",
       className: "hidden sm:block -right-5 top-4 md:-right-8 md:top-8",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/550659961_18487453072078510_356204783347706028_n-rDrmGbLvGF4nDmxViyACNhb5bWuyyP.jpg",
+      src: "/images/louise-hero-3.jpg",
       alt: "Louise in a lifestyle portrait with natural light styling.",
       className: "hidden sm:block -left-4 bottom-2 md:-left-6 md:bottom-6",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/770427690_18560009563078510_168171443335097639_n-gTWX1wDe3aW1nqLDoLa65WfEkC9Ulr.jpg",
+      src: "/images/louise-hero-4.jpg",
       alt: "Louise with a confident creator look in a portrait shot.",
       className: "block -right-5 bottom-8 md:-right-6 md:bottom-8",
     },
