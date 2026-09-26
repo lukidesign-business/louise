@@ -77,8 +77,9 @@ export function BlueprintSection() {
                 </li>
               ))}
             </ul>
-            <a href="#contact" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-neutral-900 px-8 py-4 font-medium text-white transition hover:bg-neutral-800 sm:w-auto">
-              Book now <ArrowRight size={16} />
+            <a href="#contact" className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-800 sm:px-8 sm:py-4 sm:text-base">
+              Book now <ArrowRight size={15} className="sm:hidden" />
+              <ArrowRight size={16} className="hidden sm:block" />
             </a>
             <p className="mt-3 text-xs text-neutral-500">Limited intake per month to ensure dedicated support.</p>
           </div>
