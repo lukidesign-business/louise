@@ -26,10 +26,13 @@ export function AudiencesSection() {
             <p className="mt-5 text-sm leading-7 text-neutral-600">
               Bring us your brief, your ambition and your challenge. We will shape the talent, strategy and content to make it land.
             </p>
-            <ul className="mt-6 space-y-3 text-sm text-neutral-800">
+            <ul className="mt-6 space-y-2.5 text-xs leading-relaxed text-neutral-800 sm:space-y-3 sm:text-sm">
               {brandPoints.map((point) => (
-                <li key={point} className="flex items-center gap-3">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#c9a56a] text-white"><Check size={12} /></span>
+                <li key={point} className="flex items-center gap-2.5 sm:gap-3">
+                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#c9a56a] text-white sm:h-5 sm:w-5">
+                    <Check size={10} className="sm:hidden" />
+                    <Check size={12} className="hidden sm:block" />
+                  </span>
                   {point}
                 </li>
               ))}
@@ -61,10 +64,13 @@ export function AudiencesSection() {
             <p className="mt-5 text-sm leading-7 text-neutral-600">
               We support creators with the opportunities, negotiations and strategy to build a career that lasts.
             </p>
-            <ul className="mt-6 space-y-3 text-sm text-neutral-800">
+            <ul className="mt-6 space-y-2.5 text-xs leading-relaxed text-neutral-800 sm:space-y-3 sm:text-sm">
               {creatorPoints.map((point) => (
-                <li key={point} className="flex items-center gap-3">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#c9a56a] text-white"><Check size={12} /></span>
+                <li key={point} className="flex items-center gap-2.5 sm:gap-3">
+                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#c9a56a] text-white sm:h-5 sm:w-5">
+                    <Check size={10} className="sm:hidden" />
+                    <Check size={12} className="hidden sm:block" />
+                  </span>
                   {point}
                 </li>
               ))}
