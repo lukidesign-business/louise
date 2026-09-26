@@ -26,23 +26,23 @@ export function BlueprintSection() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid auto-rows-fr grid-cols-2 gap-3 sm:gap-4 md:gap-5">
           {blueprintPhases.map(({ phase, eyebrow, title, description, deliverables }, index) => (
             <motion.article
               key={phase}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className={`rounded-2xl border border-neutral-200/60 bg-white p-7 shadow-sm transition duration-200 hover:-translate-y-1 ${index === 0 ? "bg-gradient-to-br from-[#fff9f6] to-white" : ""}`}
+              className={`flex flex-col rounded-2xl border border-neutral-200/60 bg-white p-4 shadow-sm transition duration-200 hover:-translate-y-1 sm:p-6 md:p-7 ${index === 0 ? "bg-gradient-to-br from-[#fff9f6] to-white" : ""}`}
             >
               <div>
-                <p className="text-xs font-semibold tracking-[0.2em] text-neutral-400">{phase}</p>
-                <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.16em] text-neutral-500">{eyebrow}</p>
+                <p className="text-[10px] font-semibold tracking-[0.2em] text-neutral-400 sm:text-xs">{phase}</p>
+                <p className="mt-1 hidden text-[10px] font-medium uppercase leading-snug tracking-[0.16em] text-neutral-500 sm:block">{eyebrow}</p>
               </div>
-              <h3 className="mt-5 mb-2 font-serif text-xl text-neutral-900">{title}</h3>
-              <p className="text-sm leading-relaxed text-neutral-600">{description}</p>
-              <ul className="mt-5 space-y-2.5">
+              <h3 className="mt-2 mb-2 font-serif text-base leading-snug text-neutral-900 sm:mt-5 sm:text-lg md:text-xl">{title}</h3>
+              <p className="hidden leading-relaxed text-neutral-600 sm:block sm:text-sm">{description}</p>
+              <ul className="mt-1 space-y-2 sm:mt-5 sm:space-y-2.5">
                 {deliverables.map((deliverable) => (
-                  <li key={deliverable} className="flex items-start gap-2 text-xs leading-relaxed text-neutral-600">
+                  <li key={deliverable} className="flex items-start gap-2 text-[11px] leading-relaxed text-neutral-600 sm:text-xs">
                     <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#f4e4df] text-neutral-700">
                       <Check size={10} />
                     </span>
@@ -50,7 +50,7 @@ export function BlueprintSection() {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-neutral-900 underline underline-offset-4 transition hover:opacity-70">
+              <a href="#contact" className="mt-auto inline-flex items-center gap-1.5 self-start pt-5 text-[11px] font-semibold tracking-wider text-neutral-900 underline underline-offset-4 transition hover:opacity-70 sm:gap-2 sm:pt-6 sm:text-xs">
                 Explore this phase <ArrowRight size={13} />
               </a>
             </motion.article>

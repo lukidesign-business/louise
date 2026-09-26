@@ -65,48 +65,11 @@ body::before {
   padding-right: 1.25rem;
 }
 
-.text-balance {
-  text-wrap: balance;
-}
-
 .label {
   font-size: 0.72rem;
   letter-spacing: 0.22rem;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-.soft-card {
-  border: 1px solid rgba(23, 23, 23, 0.08);
-  background: rgba(255, 255, 255, 0.36);
-  box-shadow: 0 12px 30px rgba(23, 23, 23, 0.04);
-}
-
-.botanical {
-  position: relative;
-}
-
-.botanical::before,
-.botanical::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120' fill='none'%3E%3Cpath d='M78 10C68 31 57 44 36 52C48 40 58 26 60 10H78ZM78 42C69 60 58 74 40 84C52 71 63 58 67 42H78ZM88 60C76 76 64 89 42 100C54 89 67 79 75 60H88ZM14 75C23 68 35 62 48 62C36 74 27 88 22 100C16 92 14 84 14 75Z' fill='%2384977D' fill-opacity='0.18'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  pointer-events: none;
-}
-
-.botanical::before {
-  top: -24px;
-  right: -12px;
-}
-
-.botanical::after {
-  left: -18px;
-  bottom: -22px;
-  transform: scaleX(-1);
 }
 
 @media (max-width: 768px) {
