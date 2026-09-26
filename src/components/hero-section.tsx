@@ -177,9 +177,7 @@ function HeroCollage() {
         <p className="text-[9px] uppercase tracking-wider text-neutral-500 sm:text-[10px]">campaign video views</p>
       </motion.div>
 
-      <p className="absolute left-0 top-0 z-30 w-24 -rotate-6 font-serif text-xs italic leading-tight text-neutral-700 sm:w-28 sm:text-sm lg:left-1/2 lg:top-2 lg:-translate-x-[115px]">
-        Wellness / Lifestyle / Real People / Real Results
-      </p>
+
       <p className="absolute bottom-0 right-0 z-30 w-24 rotate-6 font-serif text-xs italic leading-tight text-neutral-700 sm:w-28 sm:text-sm lg:bottom-auto lg:left-1/2 lg:right-auto lg:top-1/2 lg:w-32 lg:translate-x-[175px] lg:-translate-y-1/2">
         More Creators, Brighter Brands
       </p>
