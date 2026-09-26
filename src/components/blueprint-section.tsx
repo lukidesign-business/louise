@@ -62,7 +62,7 @@ export function BlueprintSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">Private client service</p>
             <h3 className="mb-3 mt-3 font-serif text-2xl text-neutral-900 sm:text-3xl">The Complete Creator Advisory Programme</h3>
             <p className="max-w-2xl text-sm leading-relaxed text-neutral-600">
-              Work directly with Louise and the Create &amp; Capture team to implement the full operational blueprint into your personal brand. Includes 1-on-1 strategy sessions, direct content audits, and lifetime access to our business templates.
+              Work directly with Louise and the team to build the blueprint into your own brand.
             </p>
           </div>
           <div>
