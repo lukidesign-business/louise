@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Music2, Pause, Play } from "lucide-react";
+import { ArrowRight, ArrowUpRight, LoaderCircle, Music2, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { LeafIllustration } from "@/components/leaf-illustration";
@@ -62,6 +62,7 @@ function HeroVideo() {
   // What the element is actually doing, so the button icon stays honest even if
   // the browser refuses to autoplay.
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -107,7 +108,6 @@ function HeroVideo() {
           <video
             ref={videoRef}
             src={heroConfig.videoSrc}
-            poster={heroConfig.posterSrc}
             autoPlay
             muted
             loop
@@ -117,9 +117,17 @@ function HeroVideo() {
             aria-label="Louise creator video preview"
             onPause={() => setIsPlaying(false)}
             onPlay={() => setIsPlaying(true)}
+            onLoadedData={() => setIsLoaded(true)}
           >
             <source src={heroConfig.videoSrc} type="video/mp4" />
           </video>
+
+          {!isLoaded && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-[#f1d8d6]" aria-label="Loading video" role="status">
+              <LoaderCircle className="h-8 w-8 animate-spin text-neutral-700" aria-hidden="true" />
+              <span className="sr-only">Loading video</span>
+            </div>
+          )}
 
           <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.1)] via-transparent to-transparent" aria-hidden="true" />
 
