@@ -239,7 +239,7 @@ export function HeroSection() {
                       alt={`${brand.name} logo`}
                       width={64}
                       height={40}
-                      className={`w-auto object-contain ${brand.name === "e.l.f." ? "max-h-5 max-w-10" : "max-h-7 max-w-20"}`}
+                      className={`w-auto object-contain ${brand.name === "e.l.f." ? "max-h-8 max-w-16" : "max-h-12 max-w-32"}`}
                     />
                   ) : (
                     <span className="font-display text-[9px] font-semibold tracking-[-0.02em] text-neutral-700">
