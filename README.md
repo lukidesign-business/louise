@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Create & Capture
 
-## Getting Started
+Marketing site for **Create & Capture**, a Scotland-based creator management and social content agency founded by Louise Thomson. Single-page site covering the agency's positioning, results, the Blueprint & Consultancy programme, selected work, brand/creator propositions, FAQs and an enquiry form.
 
-First, run the development server:
+Built with Next.js (App Router), React 19, Tailwind CSS v4, framer-motion and lucide-react.
+
+## Getting started
+
+```bash
+npm install
+```
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requires Node.js 20.9 or newer.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build |
+| `npm start` | Serve the production build |
+| `npm run lint` | ESLint (`eslint-config-next`) |
+| `npm run typecheck` | TypeScript, no emit |
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+  app/
+    layout.tsx        Root layout, fonts (Playfair Display + Manrope), metadata
+    page.tsx          Composes the page sections in order
+    globals.css       Tailwind entry, design tokens, shared utility classes
+  components/         One file per section, plus small shared pieces
+  lib/
+    site-data.ts      Copy and content for every section (nav, stats, work, FAQs…)
+public/
+  images/             Portrait and campaign stills
+  media/              Hero video, poster frame, section background
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Sections live in `src/components` and are rendered in order from `src/app/page.tsx`:
+`SiteHeader` → `HeroSection` → `BrandMarquee` → `AboutSection` → `BlueprintSection` → `WorkSection` → `AudiencesSection` → `FaqSection` → `ContactSection` → `SiteFooter`.
 
-## Deploy on Vercel
+## Editing content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Most copy changes need no component edits — update `src/lib/site-data.ts`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `navItems` — header and mobile nav links
+- `brandLogos` — the scrolling brand marquee
+- `blueprintPhases` — the four Blueprint phase cards (each carries a lucide icon)
+- `stats` — the animated results figures
+- `workItems` / `workFilters` — the selected-work grid and its filter chips
+- `faqItems` — the FAQ accordion
+- `heroConfig` — hero video, poster, TikTok link and the floating photo cards
+
+## Design tokens
+
+Brand colours and fonts are CSS custom properties on `:root` in `src/app/globals.css`
+(`--ivory`, `--powder`, `--blush`, `--sage`, `--champagne`, `--charcoal`, `--muted`, `--line`),
+exposed to Tailwind through `@theme inline`. Shared utilities in the same file: `.section-shell`
+(page gutter), `.label` (uppercase eyebrow text), `.font-display`, `.marquee`, `.soft-card`,
+`.botanical`. A `prefers-reduced-motion` block disables animation, and the hero video and
+count-up figures check `useReducedMotion` as well.
+
+## Before going live
+
+A few things are intentionally placeholder and should be pointed at the real destinations:
+
+- The enquiry form validates in the browser and shows a confirmation, but does not send anywhere yet — wire it to a route handler, form service or inbox.
+- Social links point at `instagram.com` / `tiktok.com`, and the footer Privacy / Terms links at `#`.
+- `hello@createandcapture.co` is the contact address used in the contact section.
+- Stats and campaign figures are selected real-world results; confirm they are current before publishing.
+
+## Deploying
+
+Deploys as a standard Next.js app on Vercel (or any Node 20+ host) with no extra
+configuration or environment variables.
