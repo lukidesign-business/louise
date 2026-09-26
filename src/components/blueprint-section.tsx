@@ -75,7 +75,7 @@ export function BlueprintSection() {
               ))}
             </ul>
             <a href="#contact" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-neutral-900 px-8 py-4 font-medium text-white transition hover:bg-neutral-800 sm:w-auto">
-              Apply for 1-on-1 Advisory <ArrowRight size={16} />
+              Book now <ArrowRight size={16} />
             </a>
             <p className="mt-3 text-xs text-neutral-500">Limited intake per month to ensure dedicated support.</p>
           </div>
