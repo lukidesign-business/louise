@@ -27,23 +27,18 @@ export function BlueprintSection() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">
-          {blueprintPhases.map(({ phase, eyebrow, title, description, deliverables, icon: Icon }, index) => (
+          {blueprintPhases.map(({ phase, eyebrow, title, description, deliverables }, index) => (
             <motion.article
               key={phase}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
               className={`rounded-2xl border border-neutral-200/60 bg-white p-7 shadow-sm transition duration-200 hover:-translate-y-1 ${index === 0 ? "bg-gradient-to-br from-[#fff9f6] to-white" : ""}`}
             >
-              <div className="flex items-start justify-between gap-5">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f4e4df] text-neutral-900">
-                  <Icon size={20} />
-                </div>
-                <div className="text-right">
-                  <p className="text-xs font-semibold tracking-[0.2em] text-neutral-400">{phase}</p>
-                  <p className="mt-1 max-w-[190px] text-[10px] font-medium uppercase tracking-[0.16em] text-neutral-500">{eyebrow}</p>
-                </div>
+              <div>
+                <p className="text-xs font-semibold tracking-[0.2em] text-neutral-400">{phase}</p>
+                <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.16em] text-neutral-500">{eyebrow}</p>
               </div>
-              <h3 className="mt-7 mb-2 font-serif text-xl text-neutral-900">{title}</h3>
+              <h3 className="mt-5 mb-2 font-serif text-xl text-neutral-900">{title}</h3>
               <p className="text-sm leading-relaxed text-neutral-600">{description}</p>
               <ul className="mt-5 space-y-2.5">
                 {deliverables.map((deliverable) => (

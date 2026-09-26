@@ -1,11 +1,8 @@
-import { Briefcase, Coins, Sparkles, Video } from "lucide-react";
-
 export const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Results", href: "#results" },
-  { label: "Work", href: "#work" },
   { label: "For Creators", href: "#for-creators" },
   { label: "Contact", href: "#contact" },
 ];
@@ -32,7 +29,6 @@ export const blueprintPhases = [
     description:
       "Audit your niche, refine your aesthetic, and optimize your profile for instant authority across TikTok and Instagram.",
     deliverables: ["Profile optimization checklist", "Bio formulas", "Content niche strategy"],
-    icon: Sparkles,
   },
   {
     phase: "PHASE 02",
@@ -41,7 +37,6 @@ export const blueprintPhases = [
     description:
       "Master the exact shooting, editing, and storytelling frameworks used to generate millions of monthly views and keep audiences engaged.",
     deliverables: ["Hook formulas", "Storytelling scripts", "Daily content workflow"],
-    icon: Video,
   },
   {
     phase: "PHASE 03",
@@ -50,7 +45,6 @@ export const blueprintPhases = [
     description:
       "Learn the exact blueprint to pitch brands, secure 4-figure paid sponsorships, and scale passive affiliate income with TikTok Shop.",
     deliverables: ["Media kit templates", "Email pitch scripts", "Rate negotiation guide"],
-    icon: Coins,
   },
   {
     phase: "PHASE 04",
@@ -59,7 +53,6 @@ export const blueprintPhases = [
     description:
       "Turn your content creation into a registered, streamlined business with recurring revenue, contracts, and scalable management tools.",
     deliverables: ["Client onboarding systems", "Invoice & contract templates"],
-    icon: Briefcase,
   },
 ];
 
@@ -70,44 +63,6 @@ export const stats = [
   { value: "£523.52", label: "Estimated rewards from a selected TikTok Shop result" },
   { value: "23.7K", label: "Louise's Instagram community" },
   { value: "2.8M", label: "Likes on a selected analytics snapshot" },
-];
-
-export const workFilters = [
-  "All",
-  "Beauty",
-  "Fashion",
-  "Fitness",
-  "Lifestyle",
-  "TikTok Shop",
-  "Presenter / Host",
-];
-
-export const workItems = [
-  {
-    category: "Beauty",
-    title: "SACHAU — Product Launch Campaign",
-    type: "UGC / Paid Social",
-    image: "/images/louise-hero-1.jpg",
-    featured: true,
-  },
-  {
-    category: "Fashion",
-    title: "Pixi Beauty — Influencer Campaign",
-    type: "Influencer / TikTok",
-    image: "/images/louise-hero-2.jpg",
-  },
-  {
-    category: "Fitness",
-    title: "Fitness Creator Partnership",
-    type: "UGC / Social",
-    image: "/images/louise-hero-3.jpg",
-  },
-  {
-    category: "Lifestyle",
-    title: "VitaMind — Lifestyle Creative",
-    type: "UGC / Organic Social",
-    image: "/images/louise-hero-4.jpg",
-  },
 ];
 
 export const faqItems = [

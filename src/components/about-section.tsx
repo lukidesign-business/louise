@@ -9,7 +9,7 @@ export function AboutSection() {
   return (
     <section id="about" className="w-full overflow-hidden">
       <div className="grid min-h-[580px] w-full grid-cols-1 lg:grid-cols-12">
-        <div className="relative flex flex-col justify-center overflow-hidden bg-[#FAF7F2] p-8 lg:col-span-5 lg:p-12">
+        <div className="relative flex flex-col justify-center overflow-hidden bg-[#FAF7F2] px-6 pb-8 pt-20 sm:px-8 lg:col-span-5 lg:p-12 lg:pt-12">
           <div className="pointer-events-none absolute -bottom-8 -right-10 opacity-40" aria-hidden="true">
             <LeafIllustration />
           </div>

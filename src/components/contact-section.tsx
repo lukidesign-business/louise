@@ -65,33 +65,27 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="bg-[#171717] py-20 text-[var(--ivory)] md:py-24">
-      <div className="section-shell relative">
-        <div className="absolute left-2 top-0 hidden h-full items-start pt-8 text-[2.2rem] font-medium text-[var(--ivory)] lg:flex">
-          <span className="inline-block -rotate-90 text-[1.2rem] uppercase tracking-[0.2rem]">6</span>
-        </div>
-
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div>
-            <p className="label text-[rgba(252,250,247,0.7)]">Let’s make something worth stopping for.</p>
-            <h2 className="mt-4 font-display text-4xl leading-[0.94] tracking-[-0.06em] text-[var(--ivory)] md:text-5xl lg:text-[4rem]">
+      <div className="section-shell">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-8">
+          <div className="lg:sticky lg:top-28">
+            <h2 className="font-display text-4xl leading-[0.94] tracking-[-0.06em] text-[var(--ivory)] md:text-5xl lg:text-[4rem]">
               Your next scroll-stopping campaign starts here.
             </h2>
-            <p className="mt-5 max-w-md text-base leading-7 text-[rgba(252,250,247,0.75)]">
+            <p className="mt-6 max-w-md text-base leading-7 text-[rgba(252,250,247,0.75)]">
               Tell us what you are building, launching or trying to grow. We will come back with the right next step.
             </p>
 
-            <div className="mt-8 space-y-5 text-sm text-[var(--ivory)]">
-              <div className="flex flex-col gap-2">
-                <span className="text-[0.7rem] uppercase tracking-[0.16rem] text-[rgba(252,250,247,0.7)]">For general enquiries</span>
-                <a href="mailto:hello@createandcapture.co" className="text-lg font-medium text-[var(--ivory)] underline decoration-[rgba(255,255,255,0.3)] underline-offset-4 transition hover:decoration-white">
-                  hello@createandcapture.co
-                </a>
-              </div>
-              <div className="flex items-center gap-4 pt-2 text-[var(--ivory)]">
-                <a href="https://instagram.com" aria-label="Instagram" className="rounded-full border border-[rgba(255,255,255,0.2)] p-2 transition hover:border-white hover:bg-white/5">
+            <div className="mt-10 border-t border-[rgba(255,255,255,0.12)] pt-8">
+              <span className="text-[0.7rem] uppercase tracking-[0.16rem] text-[rgba(252,250,247,0.6)]">For general enquiries</span>
+              <a href="mailto:hello@createandcapture.co" className="mt-3 block text-xl font-medium text-[var(--ivory)] underline decoration-[rgba(255,255,255,0.3)] underline-offset-[6px] transition hover:decoration-white md:text-2xl">
+                hello@createandcapture.co
+              </a>
+
+              <div className="mt-7 flex items-center gap-3 text-[var(--ivory)]">
+                <a href="https://instagram.com" aria-label="Instagram" className="rounded-full border border-[rgba(255,255,255,0.2)] p-2.5 transition hover:border-white hover:bg-white/5">
                   <Camera size={18} />
                 </a>
-                <a href="https://tiktok.com" aria-label="TikTok" className="rounded-full border border-[rgba(255,255,255,0.2)] p-2 transition hover:border-white hover:bg-white/5">
+                <a href="https://tiktok.com" aria-label="TikTok" className="rounded-full border border-[rgba(255,255,255,0.2)] p-2.5 transition hover:border-white hover:bg-white/5">
                   <Music2 size={18} />
                 </a>
               </div>

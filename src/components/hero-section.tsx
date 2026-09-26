@@ -44,7 +44,7 @@ function FloatingPhotoCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       whileHover={{ y: -8, rotate: 0, transition: { duration: 0.25 } }}
-      className={`absolute z-10 w-32 overflow-hidden rounded-xl border border-white/80 bg-white p-2 shadow-lg sm:w-40 ${rotate ?? ""} ${className ?? ""}`}
+      className={`absolute z-10 w-24 overflow-hidden rounded-xl border border-white/80 bg-white p-1.5 shadow-lg sm:w-32 sm:p-2 md:w-40 ${rotate ?? ""} ${className ?? ""}`}
     >
       <div className="aspect-[4/5] overflow-hidden rounded-lg">
         <Image src={src} alt={alt} width={250} height={320} className="h-full w-full object-cover" sizes="(max-width: 768px) 35vw, 20vw" loading="lazy" />
@@ -110,7 +110,7 @@ function HeroVideo() {
       initial={{ opacity: 0, scale: 0.96, y: 16 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative z-20 mx-auto max-h-[520px] w-72 lg:w-[310px]"
+      className="relative z-20 mx-auto w-52 max-w-full sm:w-64 lg:max-h-[520px] lg:w-[310px]"
     >
       <div className="relative aspect-[9/16] overflow-hidden rounded-[2.5rem] border-[6px] border-neutral-900 bg-neutral-900 shadow-2xl">
         <div className="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-neutral-900" aria-hidden="true" />
@@ -161,11 +161,11 @@ function HeroCollage() {
       initial={{ opacity: 0, x: 14 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.08 }}
-      className="relative mx-auto min-h-[470px] w-full max-w-[680px] overflow-hidden lg:min-h-[650px]"
+      className="relative mx-auto min-h-[540px] w-full max-w-[680px] overflow-hidden sm:min-h-[580px] lg:min-h-[650px]"
     >
-      <FloatingPhotoCard src={heroConfig.photos[0].src} alt={heroConfig.photos[0].alt} rotate="-rotate-3" className="left-0 top-12 sm:left-4 lg:left-0 lg:top-16" />
+      <FloatingPhotoCard src={heroConfig.photos[0].src} alt={heroConfig.photos[0].alt} rotate="-rotate-3" className="left-0 top-24 sm:left-4 sm:top-12 lg:left-0 lg:top-16" />
       <FloatingPhotoCard src={heroConfig.photos[1].src} alt={heroConfig.photos[1].alt} className="bottom-4 left-0 hidden lg:block lg:left-4" />
-      <FloatingPhotoCard src={heroConfig.photos[2].src} alt={heroConfig.photos[2].alt} rotate="rotate-2" className="right-0 top-20 sm:right-4 lg:right-0 lg:top-20" />
+      <FloatingPhotoCard src={heroConfig.photos[2].src} alt={heroConfig.photos[2].alt} rotate="rotate-2" className="right-0 top-28 sm:right-4 sm:top-20 lg:right-0 lg:top-20" />
       <FloatingPhotoCard src={heroConfig.photos[3].src} alt={heroConfig.photos[3].alt} className="bottom-6 right-0 hidden lg:block lg:right-4" />
 
       <div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 justify-center">
@@ -174,24 +174,24 @@ function HeroCollage() {
 
       <motion.div
         whileHover={{ y: -5 }}
-        className="absolute right-[calc(50%+160px)] top-1/2 z-30 rounded-xl border border-white/60 bg-white/90 px-4 py-2.5 shadow-md backdrop-blur-md lg:right-[calc(50%+171px)]"
+        className="absolute bottom-0 left-0 z-30 rounded-xl border border-white/60 bg-white/90 px-3 py-2 shadow-md backdrop-blur-md sm:px-4 sm:py-2.5 lg:bottom-auto lg:left-auto lg:right-[calc(50%+171px)] lg:top-1/2"
       >
-        <div className="font-display text-xl font-bold text-neutral-900">2.1M</div>
-        <p className="text-[10px] uppercase tracking-wider text-neutral-500">views in 30 days</p>
+        <div className="font-display text-lg font-bold text-neutral-900 sm:text-xl">2.1M</div>
+        <p className="text-[9px] uppercase tracking-wider text-neutral-500 sm:text-[10px]">views in 30 days</p>
       </motion.div>
 
       <motion.div
         whileHover={{ y: -5 }}
-        className="absolute right-0 top-2 z-30 rounded-xl border border-white/60 bg-white/90 px-4 py-2.5 shadow-md backdrop-blur-md sm:right-4 lg:right-0"
+        className="absolute right-0 top-0 z-30 rounded-xl border border-white/60 bg-white/90 px-3 py-2 shadow-md backdrop-blur-md sm:right-4 sm:top-2 sm:px-4 sm:py-2.5 lg:right-0"
       >
-        <div className="font-display text-xl font-bold text-neutral-900">2,085,733</div>
-        <p className="text-[10px] uppercase tracking-wider text-neutral-500">campaign video views</p>
+        <div className="font-display text-lg font-bold text-neutral-900 sm:text-xl">2,085,733</div>
+        <p className="text-[9px] uppercase tracking-wider text-neutral-500 sm:text-[10px]">campaign video views</p>
       </motion.div>
 
-      <p className="absolute left-1/2 top-2 z-30 w-28 -translate-x-[115px] -rotate-6 font-serif text-sm italic leading-tight text-neutral-700">
+      <p className="absolute left-0 top-0 z-30 w-24 -rotate-6 font-serif text-xs italic leading-tight text-neutral-700 sm:w-28 sm:text-sm lg:left-1/2 lg:top-2 lg:-translate-x-[115px]">
         Wellness / Lifestyle / Real People / Real Results
       </p>
-      <p className="absolute left-1/2 top-1/2 z-30 w-32 translate-x-[175px] -translate-y-1/2 rotate-6 font-serif text-sm italic leading-tight text-neutral-700">
+      <p className="absolute bottom-0 right-0 z-30 w-24 rotate-6 font-serif text-xs italic leading-tight text-neutral-700 sm:w-28 sm:text-sm lg:bottom-auto lg:left-1/2 lg:right-auto lg:top-1/2 lg:w-32 lg:translate-x-[175px] lg:-translate-y-1/2">
         More Creators, Brighter Brands
       </p>
     </motion.div>
@@ -200,7 +200,7 @@ function HeroCollage() {
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative flex min-h-[90vh] w-full items-center overflow-hidden bg-gradient-to-r from-[#FDFBF7] to-[#DDF3F5] lg:min-h-screen lg:max-h-[950px]">
+    <section id="home" className="relative flex min-h-[90vh] w-full items-center overflow-hidden bg-gradient-to-r from-[#FDFBF7] to-[#DDF3F5] pt-16 pb-10 sm:pt-20 lg:min-h-screen lg:max-h-[950px] lg:py-0">
       <div className="pointer-events-none absolute -left-10 -top-8 opacity-60" aria-hidden="true">
         <LeafIllustration />
       </div>
@@ -218,11 +218,10 @@ export function HeroSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="lg:col-span-5 lg:pr-4"
         >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">Creator management + social-first content</p>
           <h1 className="mb-6 font-serif text-4xl leading-[1.08] tracking-tight text-neutral-900 sm:text-5xl lg:text-6xl">
             Where creator culture meets measurable growth.
           </h1>
-          <p className="mb-8 max-w-lg text-base leading-relaxed text-neutral-600">
+          <p className="mb-8 max-w-lg text-sm leading-relaxed text-neutral-600 sm:text-[0.9375rem]">
             Create &amp; Capture connects ambitious brands with standout talent, social-first ideas and performance-led content built to move audiences.
           </p>
 
@@ -230,8 +229,8 @@ export function HeroSection() {
             <a href="#contact" className="inline-flex items-center gap-2 rounded-md bg-neutral-900 px-6 py-3.5 text-sm font-medium text-white transition hover:bg-neutral-800">
               Start a Project <ArrowRight size={14} />
             </a>
-            <a href="#work" className="inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-white/80 px-6 py-3.5 text-sm font-medium text-neutral-800 backdrop-blur-sm transition hover:bg-white">
-              Explore Our Work <ArrowUpRight size={14} />
+            <a href="#results" className="inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-white/80 px-6 py-3.5 text-sm font-medium text-neutral-800 backdrop-blur-sm transition hover:bg-white">
+              See Our Results <ArrowUpRight size={14} />
             </a>
           </div>
 

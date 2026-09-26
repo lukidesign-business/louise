@@ -4,10 +4,7 @@ export function SiteFooter() {
       <div className="section-shell">
         <div className="grid gap-8 md:grid-cols-[1.3fr_0.9fr_0.9fr_0.9fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-[rgba(255,255,255,0.5)] text-[0.9rem] font-semibold tracking-[0.2rem]">C</div>
-              <div className="font-display text-[1.8rem] tracking-[-0.06em]">Create &amp; Capture</div>
-            </div>
+            <div className="font-display text-[1.8rem] tracking-[-0.06em]">Create &amp; Capture</div>
             <p className="mt-4 max-w-xs text-sm leading-7 text-[var(--muted)]">
               Creator-led content and management for brands built for now.
             </p>
@@ -18,7 +15,6 @@ export function SiteFooter() {
             <ul className="space-y-3 text-sm text-[var(--muted)]">
               <li><a href="#about" className="transition hover:text-[var(--charcoal)]">About</a></li>
               <li><a href="#services" className="transition hover:text-[var(--charcoal)]">Services</a></li>
-              <li><a href="#work" className="transition hover:text-[var(--charcoal)]">Work</a></li>
             </ul>
           </div>
 
@@ -46,7 +42,6 @@ export function SiteFooter() {
             <a href="#" className="transition hover:text-[var(--charcoal)]">Terms</a>
           </div>
           <div>© {new Date().getFullYear()} Create &amp; Capture. All rights reserved.</div>
-          <div>Designed for the next scroll.</div>
         </div>
       </div>
     </footer>

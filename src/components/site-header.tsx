@@ -11,10 +11,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(23,23,23,0.08)] bg-[rgba(252,250,247,0.78)] backdrop-blur-md">
       <div className="section-shell flex items-center justify-between py-4">
-        <a href="#home" className="flex items-center gap-3" aria-label="Create & Capture home">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-[rgba(255,255,255,0.3)] text-[0.9rem] font-semibold tracking-[0.22rem]">
-            C
-          </div>
+        <a href="#home" className="flex items-center" aria-label="Create & Capture home">
           <div className="leading-none">
             <div className="font-display text-[1.5rem] tracking-[-0.05em]">Create &amp; Capture</div>
             <div className="mt-1 text-[0.58rem] tracking-[0.2rem] text-[var(--muted)] uppercase">
