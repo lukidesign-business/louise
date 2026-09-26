@@ -231,9 +231,21 @@ export function HeroSection() {
               {brandLogos.slice(0, 3).map((brand) => (
                 <span
                   key={brand.name}
-                  className="inline-flex h-8 items-center rounded-full border border-neutral-200 bg-white/90 px-2.5 font-display text-[9px] font-semibold tracking-[-0.02em] text-neutral-700 shadow-sm"
+                  className="inline-flex h-10 w-20 items-center justify-center rounded-full border border-neutral-200 bg-white/90 px-2 shadow-sm"
                 >
-                  {brand.name}
+                  {brand.logo ? (
+                    <Image
+                      src={brand.logo}
+                      alt={`${brand.name} logo`}
+                      width={64}
+                      height={40}
+                      className="max-h-7 w-auto object-contain"
+                    />
+                  ) : (
+                    <span className="font-display text-[9px] font-semibold tracking-[-0.02em] text-neutral-700">
+                      {brand.name}
+                    </span>
+                  )}
                 </span>
               ))}
             </div>
