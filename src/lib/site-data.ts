@@ -7,18 +7,25 @@ export const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const brandLogos = [
-  "L'Oréal",
-  "e.l.f.",
-  "The Ordinary",
-  "Pixi",
-  "Maybelline",
-  "Estrid",
-  "MyProtein",
-  "Biodance",
-  "Good Molecules",
-  "Free Soul",
-  "Ego",
+export type BrandLogo = {
+  /** Brand name. Used as the image alt text, and rendered as-is when no logo file is set. */
+  name: string;
+  /** Path under /public to a logo file, e.g. "/images/brands/myprotein.svg". Falls back to the name when omitted. */
+  logo?: string;
+};
+
+export const brandLogos: BrandLogo[] = [
+  { name: "L'Oréal" },
+  { name: "e.l.f." },
+  { name: "The Ordinary" },
+  { name: "Pixi" },
+  { name: "Maybelline" },
+  { name: "Estrid" },
+  { name: "MyProtein" },
+  { name: "Biodance" },
+  { name: "Good Molecules" },
+  { name: "Free Soul" },
+  { name: "Ego" },
 ];
 
 export const blueprintPhases = [
@@ -125,3 +132,6 @@ export const heroConfig = {
     },
   ],
 };
+
+export const portfolioUrl =
+  "https://www.canva.com/design/DAHBym1qid0/PJVzesjlsHGtUjfuVOwXBw/view";

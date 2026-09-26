@@ -44,7 +44,7 @@ function FloatingPhotoCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       whileHover={{ y: -8, rotate: 0, transition: { duration: 0.25 } }}
-      className={`absolute z-10 w-24 overflow-hidden rounded-xl border border-white/80 bg-white p-1.5 shadow-lg sm:w-32 sm:p-2 md:w-40 ${rotate ?? ""} ${className ?? ""}`}
+      className={`absolute z-10 w-20 overflow-hidden rounded-xl border border-white/80 bg-white p-1.5 shadow-lg sm:w-32 sm:p-2 md:w-40 ${rotate ?? ""} ${className ?? ""}`}
     >
       <div className="aspect-[4/5] overflow-hidden rounded-lg">
         <Image src={src} alt={alt} width={250} height={320} className="h-full w-full object-cover" sizes="(max-width: 768px) 35vw, 20vw" loading="lazy" />
@@ -110,7 +110,7 @@ function HeroVideo() {
       initial={{ opacity: 0, scale: 0.96, y: 16 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative z-20 mx-auto w-52 max-w-full sm:w-64 lg:max-h-[520px] lg:w-[310px]"
+      className="relative z-20 mx-auto w-48 max-w-full sm:w-64 lg:max-h-[520px] lg:w-[310px]"
     >
       <div className="relative aspect-[9/16] overflow-hidden rounded-[2.5rem] border-[6px] border-neutral-900 bg-neutral-900 shadow-2xl">
         <div className="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-neutral-900" aria-hidden="true" />
@@ -163,9 +163,9 @@ function HeroCollage() {
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.08 }}
       className="relative mx-auto min-h-[540px] w-full max-w-[680px] overflow-hidden sm:min-h-[580px] lg:min-h-[650px]"
     >
-      <FloatingPhotoCard src={heroConfig.photos[0].src} alt={heroConfig.photos[0].alt} rotate="-rotate-3" className="left-0 top-24 sm:left-4 sm:top-12 lg:left-0 lg:top-16" />
+      <FloatingPhotoCard src={heroConfig.photos[0].src} alt={heroConfig.photos[0].alt} rotate="-rotate-3" className="left-0 top-[22%] sm:left-4 sm:top-12 lg:left-0 lg:top-16" />
       <FloatingPhotoCard src={heroConfig.photos[1].src} alt={heroConfig.photos[1].alt} className="bottom-4 left-0 hidden lg:block lg:left-4" />
-      <FloatingPhotoCard src={heroConfig.photos[2].src} alt={heroConfig.photos[2].alt} rotate="rotate-2" className="right-0 top-28 sm:right-4 sm:top-20 lg:right-0 lg:top-20" />
+      <FloatingPhotoCard src={heroConfig.photos[2].src} alt={heroConfig.photos[2].alt} rotate="rotate-2" className="bottom-[22%] right-0 top-auto sm:bottom-auto sm:right-4 sm:top-20 lg:right-0 lg:top-20" />
       <FloatingPhotoCard src={heroConfig.photos[3].src} alt={heroConfig.photos[3].alt} className="bottom-6 right-0 hidden lg:block lg:right-4" />
 
       <div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 justify-center">

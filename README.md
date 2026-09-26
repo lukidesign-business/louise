@@ -52,11 +52,12 @@ Sections live in `src/components` and are rendered in order from `src/app/page.t
 Most copy changes need no component edits — update `src/lib/site-data.ts`:
 
 - `navItems` — header and mobile nav links
-- `brandLogos` — the scrolling brand marquee
+- `brandLogos` — the scrolling brand marquee. Each entry is `{ name, logo? }`: set `logo` to a path under `public/` (e.g. `"/images/brands/myprotein.svg"`) to render the brand mark, or leave it off to render the name as text.
 - `blueprintPhases` — the four Blueprint phase cards
 - `stats` — the animated results figures
 - `faqItems` — the FAQ accordion
 - `heroConfig` — hero video, poster, TikTok link and the floating photo cards
+- `portfolioUrl` — the Canva portfolio the About CTA opens
 
 ## Design tokens
 
@@ -73,6 +74,7 @@ A few things are intentionally placeholder and should be pointed at the real des
 
 - The enquiry form validates in the browser and shows a confirmation, but does not send anywhere yet — wire it to a route handler, form service or inbox.
 - Social links point at `instagram.com` / `tiktok.com`, and the footer Privacy / Terms links at `#`.
+- The brand marquee renders names as text until logo files are added to `brandLogos`.
 - `hello@createandcapture.co` is the contact address used in the contact section.
 - Stats and campaign figures are selected real-world results; confirm they are current before publishing.
 

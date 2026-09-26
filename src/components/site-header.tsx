@@ -12,12 +12,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-[rgba(23,23,23,0.08)] bg-[rgba(252,250,247,0.78)] backdrop-blur-md">
       <div className="section-shell flex items-center justify-between py-4">
         <a href="#home" className="flex items-center" aria-label="Create & Capture home">
-          <div className="leading-none">
-            <div className="font-display text-[1.5rem] tracking-[-0.05em]">Create &amp; Capture</div>
-            <div className="mt-1 text-[0.58rem] tracking-[0.2rem] text-[var(--muted)] uppercase">
-              Creator management &amp; content agency
-            </div>
-          </div>
+          <div className="font-display text-[1.5rem] leading-none tracking-[-0.05em]">Create &amp; Capture</div>
         </a>
 
         <nav className="hidden items-center gap-8 text-[0.72rem] font-medium uppercase tracking-[0.18rem] text-[var(--muted)] md:flex">

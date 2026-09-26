@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { CountUpNumber } from "@/components/count-up-number";
 import { LeafIllustration } from "@/components/leaf-illustration";
-import { stats } from "@/lib/site-data";
+import { portfolioUrl, stats } from "@/lib/site-data";
 
 export function AboutSection() {
   return (
     <section id="about" className="w-full overflow-hidden">
       <div className="grid min-h-[580px] w-full grid-cols-1 lg:grid-cols-12">
-        <div className="relative flex flex-col justify-center overflow-hidden bg-[#FAF7F2] px-6 pb-8 pt-20 sm:px-8 lg:col-span-5 lg:p-12 lg:pt-12">
+        <div className="relative flex flex-col justify-center overflow-hidden bg-[#FAF7F2] px-6 pb-8 pt-32 sm:px-8 sm:pt-28 lg:col-span-5 lg:p-12 lg:pt-12">
           <div className="pointer-events-none absolute -bottom-8 -right-10 opacity-40" aria-hidden="true">
             <LeafIllustration />
           </div>
@@ -31,8 +31,8 @@ export function AboutSection() {
               <p className="mb-6 max-w-md text-sm leading-relaxed text-neutral-600">
                 Founded by Louise Thomson and her sister, Create &amp; Capture is a Scotland-based creator management and social content agency working across fashion, fitness, beauty and lifestyle.
               </p>
-              <a href="#contact" className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-neutral-900 underline underline-offset-4 transition hover:opacity-75">
-                Meet Louise / View creator portfolio <ArrowRight size={14} />
+              <a href={portfolioUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider text-neutral-900 underline underline-offset-4 transition hover:opacity-75">
+                Meet Louise / View creator portfolio <ArrowUpRight size={14} />
               </a>
             </div>
           </div>
