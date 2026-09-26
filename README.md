@@ -1,6 +1,6 @@
 # Create & Capture
 
-Marketing site for **Create & Capture**, a Scotland-based creator management and social content agency founded by Louise Thomson. Single-page site covering the agency's positioning, results, the Blueprint & Consultancy programme, selected work, brand/creator propositions, FAQs and an enquiry form.
+Marketing site for **Create & Capture**, a Scotland-based creator management and social content agency founded by Louise Thomson. Single-page site covering the agency's positioning, results, the Blueprint & Consultancy programme, brand/creator propositions, FAQs and an enquiry form.
 
 Built with Next.js (App Router), React 19, Tailwind CSS v4, framer-motion and lucide-react.
 
@@ -38,14 +38,14 @@ src/
     globals.css       Tailwind entry, design tokens, shared utility classes
   components/         One file per section, plus small shared pieces
   lib/
-    site-data.ts      Copy and content for every section (nav, stats, work, FAQs…)
+    site-data.ts      Copy and content for every section (nav, stats, FAQs…)
 public/
-  images/             Portrait and campaign stills
+  images/             Portrait stills
   media/              Hero video, poster frame, section background
 ```
 
 Sections live in `src/components` and are rendered in order from `src/app/page.tsx`:
-`SiteHeader` → `HeroSection` → `BrandMarquee` → `AboutSection` → `BlueprintSection` → `WorkSection` → `AudiencesSection` → `FaqSection` → `ContactSection` → `SiteFooter`.
+`SiteHeader` → `HeroSection` → `BrandMarquee` → `AboutSection` → `BlueprintSection` → `AudiencesSection` → `FaqSection` → `ContactSection` → `SiteFooter`, plus a fixed `BackToTop` button.
 
 ## Editing content
 
@@ -53,9 +53,8 @@ Most copy changes need no component edits — update `src/lib/site-data.ts`:
 
 - `navItems` — header and mobile nav links
 - `brandLogos` — the scrolling brand marquee
-- `blueprintPhases` — the four Blueprint phase cards (each carries a lucide icon)
+- `blueprintPhases` — the four Blueprint phase cards
 - `stats` — the animated results figures
-- `workItems` / `workFilters` — the selected-work grid and its filter chips
 - `faqItems` — the FAQ accordion
 - `heroConfig` — hero video, poster, TikTok link and the floating photo cards
 
