@@ -6,7 +6,7 @@ import { ArrowRight, ArrowUpRight, Music2, Pause, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import { LeafIllustration } from "@/components/leaf-illustration";
-import { heroConfig } from "@/lib/site-data";
+import { brandLogos, heroConfig } from "@/lib/site-data";
 
 function VideoControls({
   isPlaying,
@@ -227,9 +227,14 @@ export function HeroSection() {
             Trusted across beauty, fashion, wellness &amp; lifestyle
           </p>
           <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-600">
-            <div className="flex -space-x-2">
-              {heroConfig.photos.slice(0, 3).map((photo) => (
-                <Image key={photo.src} src={photo.src} alt="" width={32} height={32} className="h-8 w-8 rounded-full border-2 border-[#FDFBF7] object-cover" />
+            <div className="flex items-center gap-1.5" aria-label="Partner brands">
+              {brandLogos.slice(0, 3).map((brand) => (
+                <span
+                  key={brand.name}
+                  className="inline-flex h-8 items-center rounded-full border border-neutral-200 bg-white/90 px-2.5 font-display text-[9px] font-semibold tracking-[-0.02em] text-neutral-700 shadow-sm"
+                >
+                  {brand.name}
+                </span>
               ))}
             </div>
             <span className="text-sm text-amber-500" aria-label="5 out of 5 stars">★★★★★</span>
