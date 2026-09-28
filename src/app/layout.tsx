@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   title: "Create & Capture",
   description: "Creator-led content and management for brands built for now.",
   icons: {
-    icon: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: [{ url: "/icon.png?v=2", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png?v=2", type: "image/png" }],
   },
   openGraph: {
     title: "Create & Capture",
