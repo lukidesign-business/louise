@@ -16,6 +16,10 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Create & Capture",
   description: "Creator-led content and management for brands built for now.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Create & Capture",
     description: "Creator-led content and management for brands built for now.",
